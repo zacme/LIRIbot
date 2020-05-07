@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/zacme/LIRIbot/issues"
   },
-  "homepage": "https://github.com/zacme/LIRIbot#readme"
+  "homepage": "https://github.com/zacme/LIRIbot#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.1.1"
+  }
 }
