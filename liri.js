@@ -6,17 +6,7 @@ var moment = require("moment");
 var Spotify = require('node-spotify-api');
 var fs = require("fs");
 var spotify = new Spotify(keys.spotify);
-// var defaultSong = require("The Sign");
 var defaultMovie = "Mr. Nobody";
-// var spotify = new Spotify(keys.spotify);
-
-
-
-/**
- * Name of the venue
-Venue location
-Date of the Event (use moment to format this as "MM/DD/YYYY")
- */
 var action = process.argv[2];
 var value = process.argv[3];
 
@@ -25,10 +15,7 @@ switch (action) {
     getBands(value)
     break;
   case "spotify-this-song":
-    //If user has not specified a song , use default
-    // if (value === "") {
-    //   value = defaultSong;
-    // }
+
     getSongs(value)
     break;
   case "movie-this":
@@ -59,9 +46,7 @@ function getBands(artist) {
 }
 
 function getSongs(songName) {
-  // var songName = value;
 
-  //If user has not specified a song , default to "The Sign" by Ace of Bass
   if (songName === "") {
     songName = "I Saw the Sign";
   }
@@ -70,12 +55,6 @@ function getSongs(songName) {
     if (err) {
       return console.log('Error occurred: ' + err);
     }
-    // else {
-    //   console.log("Not right now. Later?")
-
-    // console.log(JSON.stringify(data)); 
-
-    // The song's name
 
     //Artist(s)
     console.log("Artists: ", data.tracks.items[0].album.artists[0].name)
@@ -95,27 +74,23 @@ function getMovies(movieName) {
       Title of the movie: ${data.data.Title}
       Year the movie came out: ${data.data.Year}
       IMDB Rating of the movie: ${data.data.Rated}
-    //   Rotten Tomatoes Rating of the movie: ${data.data.Ratings[1].Value}
+      Rotten Tomatoes Rating of the movie: ${data.data.Ratings[1].Value}
       Country where the movie was produced: ${data.data.Country}
       Language of the movie: ${data.data.Language}
       Plot of the movie: ${data.data.Plot}
       Actors in the movie: ${data.data.Actors}`;
       console.log(results)
 
-      // console.log(data);
-      // console.log("Name of the venue:", response.data[0].venue.name);
-      // console.log("Venue location:", response.data[0].venue.city);
-      // var eventDate = moment(response.data[0].datetime).format('MM/DD/YYYY');
-      // console.log("Date of the Event:", eventDate);
+    
     })
     .catch(function (error) {
       console.log(error);
     });
-    //Response if user does not type in a movie title
-    if (movieName === "Mr. Nobody") {
-      console.log("-----------------------");
-      console.log("If you haven't watched 'Mr. Nobody,' then you should: http://www.imdb.com/title/tt0485947/");
-      console.log("It's on Netflix!");
+  //Response if user does not type in a movie title
+  if (movieName === "Mr. Nobody") {
+    console.log("-----------------------");
+    console.log("If you haven't watched 'Mr. Nobody,' then you should: http://www.imdb.com/title/tt0485947/");
+    console.log("It's on Netflix!");
   };
 }
 
