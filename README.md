@@ -16,6 +16,4 @@ Liri node app was built using node.js, Bands In Town API, Spotify API and the OM
 
 *To search for movies - simply type into the command line 'movie-this [insert movie title]'
 
-<video width="320" height="240" controls>
-  <source src="LIRI-BOT-example.mov" type="video/mp4">
-</video>
+![Example](LIRI-bot-example.mov)
