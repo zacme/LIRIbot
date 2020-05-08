@@ -1,36 +1,19 @@
-# LIRIbot
-Overview
-In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
+#LIRI-Bot
+Liri is a command line node app that will search Spotify for songs, Band in Town for concerts and OMDB for movies.
 
-Before You Begin
+##What the app does
+Liri searches for your favorite movies, artists and songs. With a simple command, this app will find upcoming concerts for your favorite band, information about your favorite songs (including a link to listen on Spotify) and information about your favorite movie.
 
+The app uses the Bands in Town API to search for upcoming concerts, the Spotify API to search for songs and the OMBd API to search for movie information.
 
-LIRI will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
+##How this app was built
+Liri node app was built using node.js, Bands In Town API, Spotify API and the OMBd API. 
 
+##How to use the app
+*To search for upcoming concerts - simply type into the command line 'concert-this [insert artist]'.
 
-Make a new GitHub repository called liri-node-app and clone it to your computer.
+*To search for songs - simply type into the command line 'spotify-this-song [insert song title]'.
 
+*To search for movies - simply type into the command line 'movie-this [insert movie title]'
 
-To retrieve the data that will power this app, you'll need to send requests using the axios package to the Bands in Town, Spotify and OMDB APIs. You'll find these Node packages crucial for your assignment.
-
-
-Node-Spotify-API
-
-
-Axios
-
-You'll use Axios to grab data from the OMDB API and the Bands In Town API
-
-
-
-
-Moment
-
-
-DotEnv
-
-
-
-
-
-Submission Guide
+![](LIRI-bot-example.mov)
